@@ -31,6 +31,15 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```sh
   npm run dev
   ```
+## Dokummentasi Postman
+Project Link: [https://documenter.getpostman.com/view/15005997/2s9YBxYvLn](https://documenter.getpostman.com/view/15005997/2s9YBxYvLn)
+
+* Login
+  Email
+* admin@gmail.com
+  Password
+* 13245678
+
 ## Dependencies yang di gunakan
 1. axios
 2. bootstrap
