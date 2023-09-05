@@ -23,9 +23,13 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```
   _Pastikan service berjalan pada url ```http://localhost:8080```._
   ### Menjalankan service Frontend
-
-  * npm ```sh npm install ```
-  * npm ```sh npm run dev
+ * bash
+  ```sh
+  npm install
+  ```
+* bash
+  ```sh
+  npm run dev
   ```
 ## Dependencies yang di gunakan
 1. axios
