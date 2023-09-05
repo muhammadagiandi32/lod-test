@@ -28,3 +28,12 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```sh
   npm install
   ```
+*   ```sh
+  npm run dev
+  ```
+## Dependencies yang di gunakan
+1. axios
+2. bootstrap
+3. jsonwebtoken
+4. vue-router
+
