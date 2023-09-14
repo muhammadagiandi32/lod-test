@@ -20,9 +20,15 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/login" tabindex="-1">Login</a>
+
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link" href="/logout" tabindex="-1">Logout</a>
                                 </li>
                             </ul>
                             <form class="d-flex">
+                                <!-- {{ console.log(checkIfTokenIsNotEmpty) }} -->
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
@@ -34,4 +40,18 @@
     </div>
 </template>
 <script>
+
+export default {
+    data: () => ({
+        isTokenIsEmpty: null
+
+    }),
+    methods: {
+        checkIfTokenIsNotEmpty() {
+            this.isTokenIsEmpty = !!localStorage.getItem('X-AUTH-TOKEN');
+            // return true  
+        }
+    },
+
+};
 </script>

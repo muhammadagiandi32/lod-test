@@ -84,17 +84,18 @@ export default {
         updateArticle(e) {
             e.preventDefault();
             // value = event.target.value;
-            let url = 'localhost:8080/api/article/update/' + this.article.id;
+            let url = '//localhost:8080/api/article/update/' + this.article.id;
             // this.article = value;
-            // console.log(url);
-            axios.patch(`api/article/update/10`, this.article, {
+            let token = localStorage.getItem('X-AUTH-TOKEN');
+            // console.log(this.article.id);
+            axios.put(`/api/article/update/${this.article.id}`, this.article, {
                 headers: {
                     "Access-Control-Allow-Origin": "*",
                     'Content-Type': 'application/json',
                     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
                     "Access-Control-Allow-Headers": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization",
                     "Access-Control-Allow-Credentials": true,
-                    'Authorization': 'Bearer ' + localStorage.getItem('X-AUTH-TOKEN')
+                    'Authorization': `Bearer ${token}`
 
                 },
             })
