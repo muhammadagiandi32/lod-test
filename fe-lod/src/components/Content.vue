@@ -7,6 +7,8 @@
                     <h1 class="fw-light">Article CRUD test PT LOD</h1>
                 </div>
             </div>
+            <input class="form-control me-2" v-model="search" placeholder="Search Article..." aria-label="Search">
+
         </section>
 
         <div class="album py-5 bg-light">
@@ -74,6 +76,7 @@ export default {
     data: () => ({
         article: [],
         readTime: [],
+        search: '',
     }),
     created() {
         this.posts = [];
@@ -86,5 +89,10 @@ export default {
                 console.log(err);
             });
     },
+    computed: {
+        article() {
+            return this.article.filter(item => item.title.includes(this.search));
+        }
+    }
 }
 </script>
